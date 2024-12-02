@@ -7,17 +7,17 @@ namespace sysProductoEN
 {
     public class Categoria
     {
-        [Key] // Define la clave primaria.
+        [Key] 
         public int CategoriaId { get; set; }
 
-        [Required(ErrorMessage = "El nombre es obligatorio.")] // Campo obligatorio.
-        [StringLength(100, ErrorMessage = "El nombre no puede tener más de 100 caracteres.")] // Longitud máxima de caracteres.
+        [Required(ErrorMessage = "El nombre es obligatorio.")] 
+        [StringLength(100, ErrorMessage = "El nombre no puede tener más de 100 caracteres.")] 
         public string Nombre { get; set; }
 
-        [StringLength(250, ErrorMessage = "La descripción no puede tener más de 250 caracteres.")] // Longitud máxima para la descripción.
+        [StringLength(250, ErrorMessage = "La descripción no puede tener más de 250 caracteres.")] 
         public string Descripcion { get; set; }
 
-        [InverseProperty("Categoria")] // Relación inversa hacia la entidad Productos.
+        [InverseProperty("Categoria")] 
         public List<Productos> Productos { get; set; }
     }
 }

@@ -23,11 +23,11 @@ namespace practica.Controllers
             if (string.IsNullOrEmpty(pProductos.Nombre))
             {
                 ModelState.AddModelError("Nombre", "El nombre del producto es obligatorio.");
-                return View(pProductos); // Vuelve a la vista con el error.
+                return View(pProductos); 
             }
 
             int result = await _productoBL.CreateProductoAsync(pProductos);
-            return RedirectToAction(nameof(Index));
+            return Redirect("/Producto/Index");
         }
         public async Task<IActionResult> Edit(int id)
         {
@@ -50,7 +50,7 @@ namespace practica.Controllers
             }
 
             int result = await _productoBL.EditProductoAsync(pProductos);
-            return RedirectToAction(nameof(Index)); // Redirige al índice si todo está bien.
+            return Redirect("/Producto/Index");
         }
 
 
@@ -71,7 +71,7 @@ namespace practica.Controllers
         public async Task<IActionResult> DeleteConfirmed(int id)
         {
             await _productoBL.DeleteAsync(id);
-            return RedirectToAction(nameof(Index));
+            return Redirect("/Producto/Index");
         }
         [HttpGet("{id}")]
         public async Task<IActionResult> Details(int id)

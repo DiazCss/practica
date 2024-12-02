@@ -41,8 +41,8 @@ namespace practica.Controllers
         {
             
                 await _categoriaBL.CreateCategoriaAsync(pCategoria);
-                return RedirectToAction(nameof(Index));
-            
+                 return Redirect("/Categoria/Index");
+
         }
 
         // GET: Categoria/Edit/5
@@ -64,7 +64,7 @@ namespace practica.Controllers
         public async Task<IActionResult> Edit(Categoria pCategoria)
         {
             await _categoriaBL.UpdateCategoriaAsync(pCategoria);
-            return RedirectToAction(nameof(Index));
+            return Redirect("/Categoria/Index");
         }
 
         // GET: Categoria/Delete/5
@@ -84,7 +84,7 @@ namespace practica.Controllers
         public async Task<IActionResult> DeleteConfirmed(int id)
         {
             await _categoriaBL.DeleteCategoriaAsync(id);
-            return RedirectToAction(nameof(Index));
+            return Redirect("/Categoria/Index");
         }
     }
 }

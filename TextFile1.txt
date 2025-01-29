@@ -1,0 +1,22 @@
+Create database Practica2;
+Use Practica2;
+CREATE TABLE `categoria` (
+	`CategoriaId` INT(10) NOT NULL AUTO_INCREMENT,
+	`Nombre` VARCHAR(50) NULL DEFAULT NULL COLLATE 'utf8mb4_0900_ai_ci',
+	`Descripcion` VARCHAR(50) NULL DEFAULT NULL COLLATE 'utf8mb4_0900_ai_ci',
+	PRIMARY KEY (`CategoriaId`) USING BTREE
+);
+
+
+CREATE TABLE `productos` (
+	`id` INT(10) NOT NULL AUTO_INCREMENT,
+	`Nombre` VARCHAR(50) NOT NULL DEFAULT '0' COLLATE 'utf8mb4_0900_ai_ci',
+	`cantidad` INT(10) NOT NULL DEFAULT '0',
+	`UnidadMedida` DECIMAL(20,6) NULL DEFAULT NULL,
+	`Precio` DECIMAL(20,6) NOT NULL DEFAULT '0',
+	`FechaVencimiento` DATE NULL DEFAULT NULL,
+	`CategoriaId` INT(10) NOT NULL DEFAULT '0',
+	PRIMARY KEY (`id`) USING BTREE,
+	INDEX `fk_categoria` (`CategoriaId`) USING BTREE,
+	CONSTRAINT `fk_categoria` FOREIGN KEY (`CategoriaId`) REFERENCES `categoria` (`CategoriaId`) ON UPDATE NO ACTION ON DELETE NO ACTION
+);

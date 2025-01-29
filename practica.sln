@@ -3,13 +3,18 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.10.35013.160
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "practica", "practica\practica.csproj", "{27D0995D-6DD1-4540-B18A-363EA880E37F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "practica", "practica\practica.csproj", "{27D0995D-6DD1-4540-B18A-363EA880E37F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "sysProductoEN", "sysProductoEN\sysProductoEN.csproj", "{34392931-4870-4197-8BB9-9931C81F4BE1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "sysProductoEN", "sysProductoEN\sysProductoEN.csproj", "{34392931-4870-4197-8BB9-9931C81F4BE1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "sysProductosDAL", "sysProductosDAL\sysProductosDAL.csproj", "{3494C159-5F18-480A-8C4A-DECD666E9D83}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "sysProductosDAL", "sysProductosDAL\sysProductosDAL.csproj", "{3494C159-5F18-480A-8C4A-DECD666E9D83}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "sysProductoBL", "sysProductoBL\sysProductoBL.csproj", "{327BB960-6526-4F20-A72F-C9CF9833E9AE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "sysProductoBL", "sysProductoBL\sysProductoBL.csproj", "{327BB960-6526-4F20-A72F-C9CF9833E9AE}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "MysqlScript", "MysqlScript", "{E11085E7-C6D9-4F13-9AC3-4C74860E596B}"
+	ProjectSection(SolutionItems) = preProject
+		TextFile1.txt = TextFile1.txt
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
